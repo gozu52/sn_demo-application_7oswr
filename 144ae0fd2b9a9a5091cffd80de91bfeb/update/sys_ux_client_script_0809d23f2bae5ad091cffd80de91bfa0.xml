@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Qn-Site Work Request Record Page">07d070392bda9a5091cffd80de91bf32</macroponent>
+        <name>______1/items</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {TransformApiHelpers} params.helpers
+ */
+function evaluateProperty({ api }) {
+	const playbooksByContextId = api.data.________________1.playbooksByContextId;
+	const selectedItem = api.data.________________1.selectedItem;
+
+	if (!playbooksByContextId || !Object.keys(playbooksByContextId).length)
+		return;
+
+	if (!selectedItem || !selectedItem.playbookContextId) return;
+
+	const cardProgressMapping = {
+		// ADD MORE PROGRESS-STATE MAPPING
+		// OR CHANGE EXISTING ONES HERE
+		PENDING: 'none',
+		ERROR: 'none',
+		CANCELLED: 'none',
+		IN_PROGRESS: 'partial',
+		SKIPPED: 'done',
+		COMPLETE: 'done'
+	};
+	const cardIconMapping = {
+		// ADD MORE ICONS-STATE MAPPING
+		// OR CHANGE EXISTING ONES HERE
+		CANCELLED: 'circle-close-outline',
+		SKIPPED: 'circle-next-outline',
+		COMPLETE: 'circle-check-outline',
+		ERROR: 'triangle-exclamation-outline',
+		SCHEDULED: 'circle-outline',
+		READY: 'circle-outline',
+		IN_PROGRESS: 'pencil-outline'
+	};
+	const lanes = playbooksByContextId[selectedItem.playbookContextId].lanes;
+	const flattenedActivities = [];
+	lanes.forEach((lane) => {
+    flattenedActivities.push({
+         id: lane.contextId,
+         label: lane.title,
+         disabled: false,
+		 progress: cardProgressMapping[lane.state.value]
+      });
+	});
+	/*
+	lanes.forEach((lane) => {
+		lane.cards.map((card) => {
+			flattenedActivities.push({
+				id: card.contextId,
+				label: card.title,
+				disabled: false,
+				//icon: cardIconMapping[card.state.value],
+				progress: cardProgressMapping[card.state.value]
+			});
+		});
+	});
+	*/
+
+	return flattenedActivities;
+}
+]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-25 10:20:24</sys_created_on>
+        <sys_id>0809d23f2bae5ad091cffd80de91bfa0</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>______1/items</sys_name>
+        <sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope>
+        <sys_update_name>sys_ux_client_script_0809d23f2bae5ad091cffd80de91bfa0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-30 02:35:33</sys_updated_on>
+        <target>macroponent</target>
+        <type>transform</type>
+    </sys_ux_client_script>
+</record_update>

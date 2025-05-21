@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_gen_ai_skill">
+    <sys_gen_ai_skill action="INSERT_OR_UPDATE">
+        <enable_followup>false</enable_followup>
+        <skill_description>岡崎市市民ポータルにおけるチャットbotとして、Knowledgeや岡崎市ホームページの情報をAI Searchで検索し回答</skill_description>
+        <skill_document>c464e58f2bd9a61091cffd80de91bfa9</skill_document>
+        <skill_name>Okazaki VA</skill_name>
+        <skill_table>sys_cs_topic</skill_table>
+        <sys_class_name>sys_gen_ai_skill</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-08 15:08:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7864298f2bd9a61091cffd80de91bf5f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope>
+        <sys_update_name>sys_gen_ai_skill_7864298f2bd9a61091cffd80de91bf5f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-08 15:08:50</sys_updated_on>
+    </sys_gen_ai_skill>
+    <sys_translated_text action="delete_multiple" query="documentkey=7864298f2bd9a61091cffd80de91bf5f"/>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey>7864298f2bd9a61091cffd80de91bf5f</documentkey>
+        <fieldname>skill_description</fieldname>
+        <language>ja</language>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-08 15:08:50</sys_created_on>
+        <sys_id>7064298f2bd9a61091cffd80de91bf61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-08 15:08:50</sys_updated_on>
+        <tablename>sys_gen_ai_skill</tablename>
+        <value/>
+    </sys_translated_text>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey>7864298f2bd9a61091cffd80de91bf5f</documentkey>
+        <fieldname>skill_name</fieldname>
+        <language>ja</language>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-08 15:08:52</sys_created_on>
+        <sys_id>1964698f2bd9a61091cffd80de91bf04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-08 15:08:52</sys_updated_on>
+        <tablename>sys_gen_ai_skill</tablename>
+        <value/>
+    </sys_translated_text>
+</record_update>

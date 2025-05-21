@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-26 04:24:36</sys_created_on>
+        <sys_id>fe7592802b36dad091cffd80de91bf13</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_7_on_site_0_event.x_snc_7_on_site_0.QSWR Approver</sys_name>
+        <sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope>
+        <sys_security_acl display_value="x_snc_7_on_site_0_event">767592802b36dad091cffd80de91bf0d</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_fe7592802b36dad091cffd80de91bf13</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-26 04:24:36</sys_updated_on>
+        <sys_user_role display_value="x_snc_7_on_site_0.QSWR Approver" name="x_snc_7_on_site_0.QSWR Approver">5e6946772b6e5ad091cffd80de91bf67</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

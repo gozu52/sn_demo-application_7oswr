@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="f17a28fd2b9a9a5091cffd80de91bffe" extends="task" label="Qn-Site Work Request" max_length="40" name="x_snc_7_on_site_0_qn_site_work_request" text_index="true" type="collection">
+        <element choice="1" label="Request Type" max_length="40" name="request_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Conference Room" value="conference_room"/>
+                <element inactive_on_update="false" label="Hotel Cube" value="hotel_cube"/>
+            </choice>
+        </element>
+        <element label="Video Conferencing" max_length="40" name="video_conferencing" type="boolean"/>
+        <element label="White board" max_length="40" name="white_board" type="boolean"/>
+        <element label="HTML Source" max_length="8000" name="u_html_source" type="html"/>
+        <element label="Requested Date" max_length="40" name="requested_date" type="glide_date"/>
+        <element label="Requested for" max_length="32" name="requested_for" reference="sys_user" type="reference"/>
+    </element>
+</database>

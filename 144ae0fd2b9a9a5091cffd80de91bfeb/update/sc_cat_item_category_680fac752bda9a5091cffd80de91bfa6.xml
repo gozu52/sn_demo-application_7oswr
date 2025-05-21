@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Qn-site Work Request">522d64f12bda9a5091cffd80de91bf0b</sc_cat_item>
+        <sc_category display_value="オフィスと印刷">109cdff8c6112276003b17991a09ad65</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-06 10:54:52</sys_created_on>
+        <sys_id>680fac752bda9a5091cffd80de91bfa6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>オフィスと印刷.Qn-site Work Request</sys_name>
+        <sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope>
+        <sys_update_name>sc_cat_item_category_680fac752bda9a5091cffd80de91bfa6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-06 10:54:52</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>

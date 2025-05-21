@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="INSERT_OR_UPDATE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <autopilot_topic>false</autopilot_topic>
+        <category/>
+        <channels/>
+        <connect_queue/>
+        <context_profiles/>
+        <description>岡崎市市民ポータルにおけるチャットbotとして、Knowledgeや岡崎市ホームページの情報をAI Searchで検索し回答</description>
+        <dialog_acts_enabled>false</dialog_acts_enabled>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>true</flexible_conversation_switching>
+        <foundational>false</foundational>
+        <graph>{
+  "graph_api_version": "1.0.78",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "6374f28939144d1089842dadc4c18ff2": {
+          "id": "6374f28939144d1089842dadc4c18ff2",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "岡崎市のチャットボットです。"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          }
+        },
+        "5071bd3f4fd34517bcc019dcf9dbe5a2": {
+          "id": "5071bd3f4fd34517bcc019dcf9dbe5a2",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          },
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          }
+        },
+        "7b5cb858942844b7afb02865c0cf24fb": {
+          "id": "7b5cb858942844b7afb02865c0cf24fb",
+          "stepType": "StandaloneAITextPrompt",
+          "name": "Input from Citizen",
+          "purpose": {
+            "value": "",
+            "mode": "simple"
+          },
+          "instructions": {
+            "value": "",
+            "mode": "simple"
+          },
+          "inputs": [
+            {
+              "itemId": "d1afe29b64244fd49a4b9e1cca3733e5",
+              "displayName": "Input from Citizen",
+              "name": "input_from_citizen",
+              "description": "",
+              "discoverable": false,
+              "dynamicDescription": {
+                "value": "岡崎市に関する調べたい内容を入力してください。",
+                "mode": "simple"
+              },
+              "type": "string",
+              "variableId": "a666b31796fb4c948b15212a33b25e15",
+              "choices": [
+                {
+                  "label": "",
+                  "value": ""
+                },
+                {
+                  "label": "",
+                  "value": ""
+                }
+              ],
+              "mode": "",
+              "script": "",
+              "condition": {
+                "value": "",
+                "mode": "glide_query"
+              },
+              "stepType": "TextPrompt",
+              "enforcePrompt": false,
+              "skippable": {
+                "value": "",
+                "mode": "query"
+              },
+              "applicability": {
+                "value": "",
+                "mode": "query"
+              },
+              "promptMessage": {
+                "value": "",
+                "mode": "simple"
+              },
+              "inputType": {
+                "format": "Text",
+                "script": ""
+              },
+              "isMultipleSelect": false,
+              "validation": "",
+              "autoSelect": true,
+              "hasCardHeader": false,
+              "cardMetadata": {
+                "mode": "card",
+                "metadataScript": "",
+                "cardTemplate": "",
+                "cardFields": {},
+                "cardDefinition": {}
+              },
+              "helpText": false,
+              "helpTextMessage": {
+                "value": "",
+                "mode": "simple"
+              }
+            }
+          ],
+          "outputs": [],
+          "advanced_parameters": "",
+          "confirmSummary": false,
+          "useSlots": false,
+          "slots": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "hiddenVariableIds": [
+            "6a70a041cd9349d38727073e5d9c917b"
+          ],
+          "hiddenVariableNames": [
+            "ai_data_collector_7b5cb858942844b7afb02865c0cf24fb_output"
+          ],
+          "standalone": true,
+          "variableIds": [
+            "a666b31796fb4c948b15212a33b25e15"
+          ],
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          }
+        },
+        "acd0d313dae44c82b08ab4ed9e4cbd39": {
+          "id": "acd0d313dae44c82b08ab4ed9e4cbd39",
+          "stepType": "ReusableTopic",
+          "name": "AI Search",
+          "fields": [],
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "useTemplateTopic": false,
+          "reusableTopicChoice": "AI Search",
+          "reusableTopicId": "b19775fa536310103296ddeeff7b12ff",
+          "inputs": {
+            "search_term": {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "type": "datapill",
+                      "dataPill": {
+                        "value": "{{vaInputs.input_from_citizen}}",
+                        "displayValue": "入力変数➛Input From Citizen"
+                      },
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "mode": "string",
+              "type": "String"
+            },
+            "search_application_configuration": {
+              "value": "7296910f53171010069addeeff7b12e7",
+              "mode": "string",
+              "type": "Reference",
+              "table": "sys_search_context_config"
+            },
+            "ask_another_search": {
+              "value": "true",
+              "mode": "string",
+              "type": "True/False"
+            }
+          },
+          "outputs": [
+            {
+              "id": "d631f10917804dac9a48e6109f21ad67",
+              "value": "geniussearchresults",
+              "mapping": "geniussearchresults",
+              "preventDisable": false
+            },
+            {
+              "id": "7ad65f3823b24cf48c3edc2a1ec7fd98",
+              "value": "searchresults",
+              "mapping": "searchresults",
+              "preventDisable": false
+            },
+            {
+              "id": "144a8a7bed134184899f428540a09b1e",
+              "value": "shouldaskinfohelpful",
+              "mapping": "shouldaskinfohelpful",
+              "preventDisable": false
+            },
+            {
+              "id": "8383fe2730bc4e299907dbb5ee06ce1f",
+              "value": "newsearchterm",
+              "mapping": "newsearchterm",
+              "preventDisable": false
+            },
+            {
+              "id": "4f2a642fa6794eb284fef65f8ebc2061",
+              "value": "shouldrunfallbacktopic",
+              "mapping": "shouldrunfallbacktopic",
+              "preventDisable": false
+            },
+            {
+              "id": "7509f38caeea42ce8e42e2b7f082166b",
+              "value": "searchmetadata",
+              "mapping": "searchmetadata",
+              "preventDisable": false
+            }
+          ],
+          "variableIds": [
+            "d631f10917804dac9a48e6109f21ad67",
+            "7ad65f3823b24cf48c3edc2a1ec7fd98",
+            "144a8a7bed134184899f428540a09b1e",
+            "8383fe2730bc4e299907dbb5ee06ce1f",
+            "4f2a642fa6794eb284fef65f8ebc2061",
+            "7509f38caeea42ce8e42e2b7f082166b"
+          ],
+          "dynamicTopicBlockName": {
+            "value": "",
+            "mode": "simple"
+          },
+          "inputDynamicModal": {},
+          "outputDynamicModal": {},
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "outdatedNote": false,
+          "loading": false
+        },
+        "01f4f5a3928a4c9bbb0201094d82e989": {
+          "id": "01f4f5a3928a4c9bbb0201094d82e989",
+          "stepType": "ReusableTopic",
+          "name": "Survey",
+          "fields": [],
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "useTemplateTopic": false,
+          "reusableTopicChoice": "Survey",
+          "reusableTopicId": "26baac293b77330074bc456993efc4dd",
+          "inputs": {
+            "surveyid": {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "51313a2b0b80330094396c2367673a82"
+                    }
+                  ]
+                }
+              ],
+              "mode": "string",
+              "type": "String"
+            },
+            "confirmationneeded": {
+              "value": "false",
+              "mode": "simple",
+              "type": "String"
+            },
+            "savequestionstocontext": {
+              "value": "false",
+              "mode": "simple",
+              "type": "String"
+            }
+          },
+          "variableIds": [],
+          "dynamicTopicBlockName": {
+            "value": "",
+            "mode": "simple"
+          },
+          "inputDynamicModal": {},
+          "outputDynamicModal": {},
+          "outputs": []
+        }
+      },
+      "edges": [
+        {
+          "id": "1fc1234068134186a76a7265b7ad982d",
+          "edgeType": "Edge",
+          "source": "6374f28939144d1089842dadc4c18ff2",
+          "target": "7b5cb858942844b7afb02865c0cf24fb",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "4f0cbee9d85c4d95b53497bae3bd7241",
+          "edgeType": "Edge",
+          "source": "7b5cb858942844b7afb02865c0cf24fb",
+          "target": "acd0d313dae44c82b08ab4ed9e4cbd39",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "61bb5225ea4d4eaf9dfe02c3d7f27e61",
+          "edgeType": "Edge",
+          "source": "acd0d313dae44c82b08ab4ed9e4cbd39",
+          "target": "01f4f5a3928a4c9bbb0201094d82e989",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "5e3b9b27ef9545bd90460c272c5ad9d5",
+          "edgeType": "Edge",
+          "source": "01f4f5a3928a4c9bbb0201094d82e989",
+          "target": "5071bd3f4fd34517bcc019dcf9dbe5a2",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "6a70a041cd9349d38727073e5d9c917b": {
+      "id": "6a70a041cd9349d38727073e5d9c917b",
+      "name": "ai_data_collector_7b5cb858942844b7afb02865c0cf24fb_output",
+      "label": "Ai_data_collector_7b5cb858942844b7afb02865c0cf24fb_output",
+      "isReferenceable": false,
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      }
+    },
+    "a666b31796fb4c948b15212a33b25e15": {
+      "id": "a666b31796fb4c948b15212a33b25e15",
+      "varType": "string",
+      "category": "vaInputs",
+      "label": "Input From Citizen",
+      "name": "input_from_citizen",
+      "choices": [
+        {
+          "label": "",
+          "value": ""
+        },
+        {
+          "label": "",
+          "value": ""
+        }
+      ],
+      "mode": "",
+      "table": "",
+      "aiInput": true,
+      "inputId": 0,
+      "nodeId": "7b5cb858942844b7afb02865c0cf24fb",
+      "isHidden": false,
+      "description": ""
+    },
+    "d631f10917804dac9a48e6109f21ad67": {
+      "id": "d631f10917804dac9a48e6109f21ad67",
+      "name": "geniussearchresults",
+      "label": "Geniussearchresults",
+      "defaultValue": "geniussearchresults",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "preventDisable": false,
+      "nodeId": "acd0d313dae44c82b08ab4ed9e4cbd39",
+      "isHidden": false
+    },
+    "7ad65f3823b24cf48c3edc2a1ec7fd98": {
+      "id": "7ad65f3823b24cf48c3edc2a1ec7fd98",
+      "name": "searchresults",
+      "label": "Searchresults",
+      "defaultValue": "searchresults",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "preventDisable": false,
+      "nodeId": "acd0d313dae44c82b08ab4ed9e4cbd39",
+      "isHidden": false
+    },
+    "144a8a7bed134184899f428540a09b1e": {
+      "id": "144a8a7bed134184899f428540a09b1e",
+      "name": "shouldaskinfohelpful",
+      "label": "Shouldaskinfohelpful",
+      "defaultValue": "shouldaskinfohelpful",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "preventDisable": false,
+      "nodeId": "acd0d313dae44c82b08ab4ed9e4cbd39",
+      "isHidden": false
+    },
+    "8383fe2730bc4e299907dbb5ee06ce1f": {
+      "id": "8383fe2730bc4e299907dbb5ee06ce1f",
+      "name": "newsearchterm",
+      "label": "Newsearchterm",
+      "defaultValue": "newsearchterm",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "preventDisable": false,
+      "nodeId": "acd0d313dae44c82b08ab4ed9e4cbd39",
+      "isHidden": false
+    },
+    "4f2a642fa6794eb284fef65f8ebc2061": {
+      "id": "4f2a642fa6794eb284fef65f8ebc2061",
+      "name": "shouldrunfallbacktopic",
+      "label": "Shouldrunfallbacktopic",
+      "defaultValue": "shouldrunfallbacktopic",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "preventDisable": false,
+      "nodeId": "acd0d313dae44c82b08ab4ed9e4cbd39",
+      "isHidden": false
+    },
+    "7509f38caeea42ce8e42e2b7f082166b": {
+      "id": "7509f38caeea42ce8e42e2b7f082166b",
+      "name": "searchmetadata",
+      "label": "Searchmetadata",
+      "defaultValue": "searchmetadata",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "preventDisable": false,
+      "nodeId": "acd0d313dae44c82b08ab4ed9e4cbd39",
+      "isHidden": false
+    }
+  }
+}</graph>
+        <key_phrases/>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <model_type>llm</model_type>
+        <modify_confirmation_enabled>false</modify_confirmation_enabled>
+        <name>Okazaki VA Search</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles/>
+        <root_topic_id/>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id/>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-08 15:00:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>0972e14b2bd9a61091cffd80de91bfd0</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Okazaki VA Search</sys_name>
+        <sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope>
+        <sys_update_name>sys_cb_topic_0972e14b2bd9a61091cffd80de91bfd0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-14 07:38:29</sys_updated_on>
+        <title>Okazaki VA</title>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>SMALL_TALK</type>
+    </sys_cb_topic>
+    <sys_translated_text action="delete_multiple" query="documentkey=0972e14b2bd9a61091cffd80de91bfd0"/>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey>0972e14b2bd9a61091cffd80de91bfd0</documentkey>
+        <fieldname>description</fieldname>
+        <language>ja</language>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-08 15:00:23</sys_created_on>
+        <sys_id>c172e14b2bd9a61091cffd80de91bfd1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-08 15:00:23</sys_updated_on>
+        <tablename>sys_cb_topic</tablename>
+        <value>岡崎市市民ポータルにおけるチャットbotとして、Knowledgeや岡崎市ホームページの情報をAI Searchで検索し回答</value>
+    </sys_translated_text>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey>0972e14b2bd9a61091cffd80de91bfd0</documentkey>
+        <fieldname>title</fieldname>
+        <language>ja</language>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-08 15:00:23</sys_created_on>
+        <sys_id>8572e1cb2bd9a61091cffd80de91bfff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-08 15:00:23</sys_updated_on>
+        <tablename>sys_cb_topic</tablename>
+        <value>Okazaki VA</value>
+    </sys_translated_text>
+</record_update>

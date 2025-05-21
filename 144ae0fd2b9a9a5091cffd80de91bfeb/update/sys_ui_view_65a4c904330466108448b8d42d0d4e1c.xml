@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view">
+    <sys_ui_view action="INSERT_OR_UPDATE">
+        <group/>
+        <hidden>false</hidden>
+        <name>workspace-calendar-7-oswr-0</name>
+        <roles/>
+        <sys_class_name>sys_ui_view</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-26 01:49:57</sys_created_on>
+        <sys_id>65a4c904330466108448b8d42d0d4e1c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Workspace Calendar 7 OSWR 0</sys_name>
+        <sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope>
+        <sys_update_name>sys_ui_view_65a4c904330466108448b8d42d0d4e1c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-26 01:49:57</sys_updated_on>
+        <title>Workspace Calendar 7 OSWR 0</title>
+        <user/>
+    </sys_ui_view>
+</record_update>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_search_filter">
+    <sys_search_filter action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <ais_search_source display_value="XCC - Confluence Search Source">448893192b68e29091cffd80de91bfa6</ais_search_source>
+        <label>Confluence Cloud</label>
+        <name>XCC - Confluence Search Source</name>
+        <order>1300</order>
+        <search_context_config display_value="[AIS] Next Experience 検索構成">6ebf8fe1531201107f03ddeeff7b122b</search_context_config>
+        <sys_class_name>sys_search_filter</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-30 07:36:26</sys_created_on>
+        <sys_id>b3103e5c8351e210dd358878beaad349</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>XCC - Confluence Search Source</sys_name>
+        <sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope>
+        <sys_update_name>sys_search_filter_b3103e5c8351e210dd358878beaad349</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-30 07:36:26</sys_updated_on>
+    </sys_search_filter>
+</record_update>

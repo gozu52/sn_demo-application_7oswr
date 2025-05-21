@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_applet_launcher_m2m_section">
+    <sys_sg_applet_launcher_m2m_section action="INSERT_OR_UPDATE">
+        <applet_launcher display_value="ホームページ">5657c6732b6e5ad091cffd80de91bf1b</applet_launcher>
+        <order/>
+        <section display_value="My Approval Rec">ca1946b32b6e5ad091cffd80de91bf19</section>
+        <sys_class_name>sys_sg_applet_launcher_m2m_section</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-25 08:51:59</sys_created_on>
+        <sys_id>46194e372b6e5ad091cffd80de91bfec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope>
+        <sys_update_name>sys_sg_applet_launcher_m2m_section_46194e372b6e5ad091cffd80de91bfec</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 08:51:59</sys_updated_on>
+    </sys_sg_applet_launcher_m2m_section>
+</record_update>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_applet_launcher_header">
+    <sys_sg_applet_launcher_header action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_sg_applet_launcher_header</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-25 08:44:22</sys_created_on>
+        <sys_id>5a57c6732b6e5ad091cffd80de91bf18</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Hello, </sys_name>
+        <sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope>
+        <sys_update_name>sys_sg_applet_launcher_header_5a57c6732b6e5ad091cffd80de91bf18</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 08:44:22</sys_updated_on>
+        <text>Hello, </text>
+        <variables>9657c6732b6e5ad091cffd80de91bf14</variables>
+    </sys_sg_applet_launcher_header>
+</record_update>

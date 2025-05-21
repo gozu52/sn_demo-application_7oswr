@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic_library_usage">
+    <sys_cb_topic_library_usage action="DELETE">
+        <calling_cb_topic_id display_value="Okazaki VA Search">0972e14b2bd9a61091cffd80de91bfd0</calling_cb_topic_id>
+        <library_cb_topic_id display_value="Survey-LLM">dba94e44ff2202101b82157c03cb145a</library_cb_topic_id>
+        <sys_class_name>sys_cb_topic_library_usage</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-13 06:30:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>9ead91202be9a21091cffd80de91bf9b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope>
+        <sys_update_name>sys_cb_topic_library_usage_9ead91202be9a21091cffd80de91bf9b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-13 06:30:21</sys_updated_on>
+    </sys_cb_topic_library_usage>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</application>
+        <file_path/>
+        <instance_id>c630d7ecdbd4465092f5684e139619cc</instance_id>
+        <instance_name>gozuwashingtondev</instance_name>
+        <name>sys_cb_topic_library_usage_9ead91202be9a21091cffd80de91bf9b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic_library_usage"><sys_cb_topic_library_usage action="INSERT_OR_UPDATE"><calling_cb_topic_id display_value="Okazaki VA Search">0972e14b2bd9a61091cffd80de91bfd0</calling_cb_topic_id><library_cb_topic_id display_value="Survey-LLM">dba94e44ff2202101b82157c03cb145a</library_cb_topic_id><sys_class_name>sys_cb_topic_library_usage</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-05-13 06:30:21</sys_created_on><sys_domain>global</sys_domain><sys_id>9ead91202be9a21091cffd80de91bf9b</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package><sys_policy/><sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope><sys_update_name>sys_cb_topic_library_usage_9ead91202be9a21091cffd80de91bf9b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-05-13 06:30:21</sys_updated_on></sys_cb_topic_library_usage></record_update>]]></payload>
+        <payload_hash>-1403014562</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>984a24fd2b9a9a5091cffd80de91bf9e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-13 06:30:21</sys_created_on>
+        <sys_id>5ead91202be9a21091cffd80de91bf9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>196c8564d870000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-13 06:30:21</sys_updated_on>
+        <type>Topic Library Usage</type>
+        <update_guid>dead912020e9a2108a5c5db6a1a0109d</update_guid>
+        <update_guid_history>dead912020e9a2108a5c5db6a1a0109d:-1403014562</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-13 06:32:48</sys_created_on>
+        <sys_db_object display_value="" name="sys_cb_topic_library_usage">sys_cb_topic_library_usage</sys_db_object>
+        <sys_id>0106154566be4aed80d1adcfe9231fc9</sys_id>
+        <sys_metadata>9ead91202be9a21091cffd80de91bf9b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope>
+        <sys_scope_delete display_value="">162805ea87d5437c893ec00107269d90</sys_scope_delete>
+        <sys_update_name>sys_cb_topic_library_usage_9ead91202be9a21091cffd80de91bf9b</sys_update_name>
+        <sys_update_version display_value="sys_cb_topic_library_usage_9ead91202be9a21091cffd80de91bf9b">5ead91202be9a21091cffd80de91bf9e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-13 06:32:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

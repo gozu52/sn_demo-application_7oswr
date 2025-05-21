@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="167b6ff42ba69a9091cffd80de91bf07" label="AudioSaveDB" max_length="40" name="x_snc_7_on_site_0_audiosavedb" type="collection">
+        <element label="Audio File Size" max_length="100" name="audio_file_size" type="string"/>
+        <element label="RecAudio" max_length="40" name="recaudio" type="audio"/>
+        <element label="Audio File Name" max_length="100" name="audio_file_name" type="string"/>
+        <element label="Related Record" max_length="32" name="related_record" reference="task" type="reference"/>
+        <index name="index">
+            <element name="related_record"/>
+        </index>
+    </element>
+</database>

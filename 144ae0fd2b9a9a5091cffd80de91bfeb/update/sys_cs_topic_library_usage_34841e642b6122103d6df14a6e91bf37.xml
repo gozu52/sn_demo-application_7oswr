@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_topic_library_usage">
+    <sys_cs_topic_library_usage action="INSERT_OR_UPDATE">
+        <calling_cs_topic_id display_value="Okazaki VA Search">c464e58f2bd9a61091cffd80de91bfa9</calling_cs_topic_id>
+        <library_cs_topic_id display_value="Survey">26baac293b77330074bc456993efc4dd</library_cs_topic_id>
+        <library_usage>{"type":"LibraryCall","library_topic_name":"Survey","library_topic_id":"26baac293b77330074bc456993efc4dd","library_topic_is_template":false,"parameter-mappings":[{"parameter-name":"surveyid","value":{"type":"String","mode":"string","value":"51313a2b0b80330094396c2367673a82"},"metadata":{"type":"String","list":false,"items":[],"use_items":false}},{"parameter-name":"confirmationneeded","value":{"type":"String","mode":"string","value":"false"},"metadata":{"type":"String","list":false,"items":[],"use_items":false}},{"parameter-name":"savequestionstocontext","value":{"type":"String","mode":"string","value":"false"},"metadata":{"type":"String","list":false,"items":[],"use_items":false}}],"return-value-mappings":[],"header_card_fields":[],"id":"01f4f5a3928a4c9bbb0201094d82e989","name":"Survey","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false}</library_usage>
+        <node_id>01f4f5a3928a4c9bbb0201094d82e989</node_id>
+        <sys_class_name>sys_cs_topic_library_usage</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-13 10:29:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>34841e642b6122103d6df14a6e91bf37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope>
+        <sys_update_name>sys_cs_topic_library_usage_34841e642b6122103d6df14a6e91bf37</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-13 10:29:59</sys_updated_on>
+    </sys_cs_topic_library_usage>
+</record_update>
