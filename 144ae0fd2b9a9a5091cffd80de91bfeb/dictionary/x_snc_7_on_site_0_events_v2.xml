@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="a1b6664c2b76dad091cffd80de91bff6" extends="task" label="7_On-site Work Request" max_length="40" name="x_snc_7_on_site_0_events_v2" text_index="true" type="collection">
+        <element label="Event Title" max_length="255" name="event_title" type="string"/>
+        <element label="Event End Date" max_length="40" name="event_end_date" type="glide_date_time"/>
+        <element label="Event Start Date" max_length="40" name="event_start_date" type="glide_date_time"/>
+        <element label="Event Description" max_length="4000" name="event_description" type="string"/>
+        <element label="Event Short Description" max_length="100" name="event_short_description" type="string"/>
+    </element>
+</database>

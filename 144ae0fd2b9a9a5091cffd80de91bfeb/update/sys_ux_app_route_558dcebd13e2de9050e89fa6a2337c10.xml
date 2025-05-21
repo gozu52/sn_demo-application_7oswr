@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="INSERT_OR_UPDATE">
+        <app_config display_value="7_On-site Work Request ex portal App Config">c18d8ebd0ae2de9063808576587bdeeb</app_config>
+        <description/>
+        <extension_point/>
+        <fields>sysId</fields>
+        <icon/>
+        <name>Catalog Item Page</name>
+        <optional_parameters/>
+        <order>0</order>
+        <parent_macroponent display_value="Portal App Shell">b66bf1075b31101016fd7c1bf481c7a7</parent_macroponent>
+        <parent_macroponent_composition_element_id/>
+        <route_type>catalog</route_type>
+        <screen_type display_value="Catalog Item Page">158dcebd04e2de901a592d94f7b9c811</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-19 04:03:33</sys_created_on>
+        <sys_id>558dcebd13e2de9050e89fa6a2337c10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Catalog Item Page</sys_name>
+        <sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope>
+        <sys_update_name>sys_ux_app_route_558dcebd13e2de9050e89fa6a2337c10</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-19 04:03:33</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="delete_multiple" query="documentkey=558dcebd13e2de9050e89fa6a2337c10"/>
+</record_update>

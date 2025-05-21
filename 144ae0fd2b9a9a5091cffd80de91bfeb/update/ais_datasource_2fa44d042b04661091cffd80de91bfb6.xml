@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_datasource">
+    <ais_datasource action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conflict>false</conflict>
+        <embedding_model>E5FT</embedding_model>
+        <filter/>
+        <force_late_binding>false</force_late_binding>
+        <name>Event Table</name>
+        <retention_policy/>
+        <source>x_snc_7_on_site_0_event</source>
+        <sys_class_name>ais_datasource</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-26 01:50:03</sys_created_on>
+        <sys_id>2fa44d042b04661091cffd80de91bfb6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Event Table</sys_name>
+        <sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope>
+        <sys_update_name>ais_datasource_2fa44d042b04661091cffd80de91bfb6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-26 01:50:03</sys_updated_on>
+        <type>internal</type>
+    </ais_datasource>
+</record_update>

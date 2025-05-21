@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="related_record" label="Related Record" language="en" table="x_snc_7_on_site_0_audiosavedb">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>related_record</element>
+            <help/>
+            <hint/>
+            <label>Related Record</label>
+            <language>en</language>
+            <name>x_snc_7_on_site_0_audiosavedb</name>
+            <plural>Related Records</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-12-16 08:26:06</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Related Record</sys_name>
+            <sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_7_on_site_0_audiosavedb_related_record_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-12-16 08:26:06</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

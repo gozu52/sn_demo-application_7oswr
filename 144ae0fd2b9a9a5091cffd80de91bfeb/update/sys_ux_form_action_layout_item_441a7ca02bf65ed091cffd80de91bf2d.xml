@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_form_action_layout_item">
+    <sys_ux_form_action_layout_item action="INSERT_OR_UPDATE">
+        <action display_value="Export Record">3f0a34a02bf65ed091cffd80de91bfff</action>
+        <active>true</active>
+        <animate_icon>false</animate_icon>
+        <color>secondary</color>
+        <description/>
+        <icon/>
+        <item_type>action</item_type>
+        <label>Export Record</label>
+        <layout_group/>
+        <name>Export Record</name>
+        <order>1000</order>
+        <overflow>false</overflow>
+        <sys_class_name>sys_ux_form_action_layout_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-27 11:02:08</sys_created_on>
+        <sys_id>441a7ca02bf65ed091cffd80de91bf2d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Export Record</sys_name>
+        <sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope>
+        <sys_update_name>sys_ux_form_action_layout_item_441a7ca02bf65ed091cffd80de91bf2d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-27 11:02:08</sys_updated_on>
+        <table>x_snc_7_on_site_0_qn_site_work_request</table>
+    </sys_ux_form_action_layout_item>
+</record_update>

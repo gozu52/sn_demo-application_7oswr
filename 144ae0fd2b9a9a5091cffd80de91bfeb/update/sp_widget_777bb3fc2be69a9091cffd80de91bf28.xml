@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function ($scope, $http) {
+    let mediaRecorder;
+    let audioChunks = [];
+    const ADOtableName = "x_snc_7_on_site_0_qn_site_work_request"; // 添付先のテーブル
+    const tableSysId = "c6a347f22bdede5091cffd80de91bffd"; // レコードのsys_idを指定
+	
+  	//const saveButton = document.getElementById('save');
+
+    document.getElementById('record').onclick = () => {
+        navigator.mediaDevices.getUserMedia({ audio: true })
+            .then((stream) => {
+                mediaRecorder = new MediaRecorder(stream);
+                mediaRecorder.start();
+                audioChunks = [];
+
+                mediaRecorder.ondataavailable = (event) => {
+                    audioChunks.push(event.data);
+                };
+
+                document.getElementById('record').disabled = true;
+                document.getElementById('stop').disabled = false;
+            })
+            .catch((error) => {
+                console.error("マイクへのアクセスに失敗しました:", error);
+                alert("マイクのアクセスを許可してください。");
+            });
+    };
+
+    document.getElementById('stop').onclick = () => {
+        mediaRecorder.stop();
+        mediaRecorder.onstop = () => {
+            const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+            const formData = new FormData();
+            formData.append('file', audioBlob, 'recording.wav');
+					// 追記したもの
+					  formData.append('file_name', 'recording.wav');
+					/*	
+					  // FormDataの内容を確認
+					  for (let [key, value] of formData.entries()) {
+					      console.log(`${key}:`, value);
+					  }
+					console.log("table_name:", ADOtableName);
+					//console.log("sysid:", tableSysId);
+            const uploadUrl = `/api/now/attachment/upload?table_name=x_snc_7_on_site_0_qn_site_work_request&table_sys_id=c6a347f22bdede5091cffd80de91bffd`;
+					  //const uploadUrl = `/api/now/attachment/upload?table_name=${ADOtableName}&table_sys_id=${tableSysId}`;
+					  console.log("Upload URL:", uploadUrl);
+					  var attachmentUrl = '/api/now/attachment/upload';
+					  var requestBody = {
+							table_name: "x_snc_7_on_site_0_qn_site_work_request",
+							table_sys_id: "c6a347f22bdede5091cffd80de91bffd",
+							file_name: "test",
+						}
+
+            // ServiceNowへアップロード
+            $http.post(uploadUrl, formData, {
+                //headers: { 'Content-Type': 'multipart/form-data' } // FormDataにはContent-Typeを自動設定
+                //headers: { 'Content-Type': 'multipart/octet-stream' } // FormDataにはContent-Typeを自動設定
+							  //headers: {'X-UserToken': g_ck }// CSRFトークンを含める
+							  headers: { 'Content-Type': undefined }
+            }).then((response) => {
+                console.log("録音ファイルをアップロードしました:", response.data);
+                alert("録音データがServiceNowにアップロードされました！");
+            }).catch((error) => {
+                console.error("アップロードに失敗しました:", error);
+                alert("アップロード中にエラーが発生しました。");
+							  console.error("APIエラー:", error.data);
+							  console.log("audioBlob:", audioBlob);
+							  console.log("Blob size:", audioBlob.size); // サイズが0の場合、データが生成されていない
+							  console.log("Table Name:", ADOtableName);
+							  console.log("Upload URL:", uploadUrl);
+            });
+					*/
+					
+					//saveButton.disabled = false;
+
+            // 録音データを再生可能に
+            const audioUrl = URL.createObjectURL(audioBlob);
+            document.getElementById('audioPlayback').src = audioUrl;
+
+            document.getElementById('record').disabled = false;
+            document.getElementById('stop').disabled = true;
+						
+					  const a = document.createElement('a');
+					  a.href = audioUrl;
+					  a.download = 'recording.wav';
+					
+					  
+					
+					
+        };
+    };
+	
+	  document.getElementById('save').onClick = () => {
+			const saveAudioUrl = URL.createObjectURL(audioBlob);
+			console.log("保存ボタンテスト:",audioUrl);
+			const a = document.createElement('a');
+			a.href = saveAudioUrl;
+			a.download = 'recording.wav';
+			a.style.display = 'none';
+
+      document.body.appendChild(a);
+      a.click();
+			
+      // DOM からリンクを削除しURLを解放
+      document.body.removeChild(a);
+      URL.revokeObjectURL(audioUrl);
+
+      alert('録音データが保存されました！');
+			 
+		};	   
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>audio_rec_widget</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>audio_rec_widget</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-16 09:30:04</sys_created_on>
+        <sys_id>777bb3fc2be69a9091cffd80de91bf28</sys_id>
+        <sys_mod_count>50</sys_mod_count>
+        <sys_name>audio_rec_widget</sys_name>
+        <sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope>
+        <sys_update_name>sp_widget_777bb3fc2be69a9091cffd80de91bf28</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-18 12:52:07</sys_updated_on>
+        <template><![CDATA[<!--
+<div>
+  <button id="record" class="btn btn-primary">録音開始</button>
+  <button id="stop" class="btn btn-danger" disabled>録音停止</button>
+  <audio id="audioPlayback" controls></audio>
+</div>
+-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音声録音と保存</title>
+    <style>
+        #record, #stop, #save {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>音声録音と保存</h1>
+    <button id="record" class="btn btn-primary">録音開始</button>
+    <button id="stop" class="btn btn-danger" disabled>録音停止</button>
+    <button id="save" class="btn btn-success">保存</button>
+    <audio id="audioPlayback" controls></audio>
+</body>
+</html>]]></template>
+    </sp_widget>
+</record_update>

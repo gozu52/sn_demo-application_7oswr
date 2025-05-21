@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_topic_library_usage">
+    <sys_cs_topic_library_usage action="INSERT_OR_UPDATE">
+        <calling_cs_topic_id display_value="Okazaki VA Search">c464e58f2bd9a61091cffd80de91bfa9</calling_cs_topic_id>
+        <library_cs_topic_id display_value="Data Collector">4c19933e4322211006650464dbb8f22d</library_cs_topic_id>
+        <library_usage>{"type":"LibraryCall","library_topic_name":"Data Collector","library_topic_id":"4c19933e4322211006650464dbb8f22d","library_topic_is_template":false,"parameter-mappings":[{"parameter-name":"definition","value":{"type":"String","mode":"script","value":"(function execute() {\n        var config = {\n            configuration: {\"purpose\":\"{{0}}\",\"inputs\":[{\"name\":\"input_from_citizen\",\"type\":\"string\",\"discoverable\":false,\"description\":\"{{4}}\",\"skipMode\":\"'simple'\",\"skipCondition\":\"\\\"\\\"\",\"helpText\":\"false\",\"applicability\":\"\",\"validation\":\"\"}],\"instructions\":\"{{1}}\",\"advanced_parameters\":\"{{2}}\",\"callingTask\":\"{{3}}\",\"confirm_summary\":false,\"slots\":[],\"applicability\":\"\"}\n        };\n        return JSON.stringify(config);\n    })()"},"metadata":{"type":"String","list":false,"items":[],"use_items":false}},{"parameter-name":"inputs","metadata":{"type":"String","list":true,"items":[{"type":"String","mode":"string","value":"Collect user input"},{"type":"String","mode":"string","value":""},{"type":"String","mode":"string","value":""},{"type":"String","mode":"script","value":"(function() { return vaSystem.getConversationTaskId()})()"},{"type":"String","mode":"string","value":"\"岡崎市に関する調べたい内容を入力してください。\""}],"use_items":true}}],"return-value-mappings":[{"main_topic_variable_namespace":"vaInputs","library_topic_return_parameter_name":"outputs","main_topic_mapped_variable_name":"ai_data_collector_7b5cb858942844b7afb02865c0cf24fb_output"}],"header_card_fields":[],"id":"7b5cb858942844b7afb02865c0cf24fb","name":"Input from Citizen","goal_id":"primary","expert_mode":false,"variableIds":["a666b31796fb4c948b15212a33b25e15"]}</library_usage>
+        <node_id>7b5cb858942844b7afb02865c0cf24fb</node_id>
+        <sys_class_name>sys_cs_topic_library_usage</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-08 15:08:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>9c64e58f2bd9a61091cffd80de91bfd5</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope>
+        <sys_update_name>sys_cs_topic_library_usage_9c64e58f2bd9a61091cffd80de91bfd5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-14 07:27:27</sys_updated_on>
+    </sys_cs_topic_library_usage>
+</record_update>

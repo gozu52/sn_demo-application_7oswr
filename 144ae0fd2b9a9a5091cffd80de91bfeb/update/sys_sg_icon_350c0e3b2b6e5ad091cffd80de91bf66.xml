@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_icon">
+    <sys_sg_icon action="INSERT_OR_UPDATE">
+        <icon>{"FontName":"now-mobile-icons-buttons","Name":"Check Circle Solid","Code":"e91a"}</icon>
+        <name>Approval List</name>
+        <sys_class_name>sys_sg_icon</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-25 09:04:49</sys_created_on>
+        <sys_id>350c0e3b2b6e5ad091cffd80de91bf66</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Approval List</sys_name>
+        <sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope>
+        <sys_update_name>sys_sg_icon_350c0e3b2b6e5ad091cffd80de91bf66</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 09:04:49</sys_updated_on>
+        <type>font</type>
+    </sys_sg_icon>
+</record_update>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>true</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_snc_7_on_site_0_qn_site_work_request</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_snc_7_on_site_0_qn_site_work_request">white_board=true^EQ<item endquery="false" field="white_board" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message><![CDATA[<p>PDFを生成しました。</p>]]></message>
+        <name>PDF Gen</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// retrieve html source
+	var html = current.getValue('u_html_source');
+
+	// retrieve field data
+	var number = current.number;
+	var assignedTo = current.getDisplayValue('assigned_to');
+	var assignmentGroup = current.getDisplayValue('assignment_group');
+	var openedBy = current.getDisplayValue('opened_by');
+	var requestedFor = current.getDisplayValue('requested_for');
+	var requestedDate = current.getDisplayValue('requested_date');
+	var requestType = current.getDisplayValue('request_type');
+	var created = current.getDisplayValue('sys_created_on');
+	var videoConferencing = current.getDisplayValue('video_conferencing');
+	var whiteBoard = current.getDisplayValue('white_board');
+	var state = current.getDisplayValue('state');
+	var approval = current.getDisplayValue('approval');
+
+	dynamicReplacements = [
+		{id: 'number', newValue: number},
+		{id: 'assigned-to', newValue: assignedTo},
+		{id: 'assignment-group', newValue: assignmentGroup},
+		{id: 'opened-by', newValue: openedBy},
+		{id: 'requested-for', newValue: requestedFor},
+		{id: 'requested-date', newValue: requestedDate},
+		{id: 'request-type', newValue: requestType},
+		{id: 'created', newValue: created},
+		{id: 'video-conferencing', newValue: videoConferencing},
+		{id: 'white-board', newValue: whiteBoard},
+		{id: 'state', newValue: state},
+		{id: 'approval', newValue: approval}
+	];
+
+	// replace html data to field data
+	dynamicReplacements.forEach(replacement => {
+		const regex = new RegExp(`(<[^>]*id="${replacement.id}"[^>]*value=")([^"]*)(")`, 'g');
+		html = html.replace(regex, `$1${replacement.newValue}$3`);
+	});
+
+	// call PDF API and convert html to PDF
+	var v = new sn_pdfgeneratorutils.PDFGenerationAPI;
+	var targetTable = current.getRecordClassName();
+	var recordId = current.getUniqueValue();
+	var docName = "PDF_" + current.number;
+	var res = v.convertToPDF(html,targetTable,recordId,docName);
+	gs.info(JSON.stringify(res));
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-03 07:54:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>58a150b6c37eda903a68d13115013145</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>PDF Gen</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope>
+        <sys_update_name>sys_script_58a150b6c37eda903a68d13115013145</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-03 12:28:59</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=58a150b6c37eda903a68d13115013145"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>58a150b6c37eda903a68d13115013145</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-03 07:54:09</sys_created_on>
+        <sys_id>a62214b6c37eda903a68d13115013120</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-03 07:54:09</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

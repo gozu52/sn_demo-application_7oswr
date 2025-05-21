@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <graph_schema action="INSERT_OR_UPDATE" graph_id="64afb001831da610dd358878beaad3b9" name="test_kgraph" sys_domain="" table="sys_meta_graph" version="1">
+        <nodes/>
+        <edges/>
+        <properties/>
+        <sys_meta_graph action="INSERT_OR_UPDATE">
+            <default>false</default>
+            <description/>
+            <gtop_schema/>
+            <label>Test KGraph</label>
+            <name>test_kgraph</name>
+            <parent/>
+            <schema_json/>
+            <scope>144ae0fd2b9a9a5091cffd80de91bfeb</scope>
+            <sys_class_name>sys_meta_graph</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-05-02 07:20:24</sys_created_on>
+            <sys_id>64afb001831da610dd358878beaad3b9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Test KGraph</sys_name>
+            <sys_package display_value="7_On-site Work Request" source="x_snc_7_on_site_0">144ae0fd2b9a9a5091cffd80de91bfeb</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="7_On-site Work Request">144ae0fd2b9a9a5091cffd80de91bfeb</sys_scope>
+            <sys_update_name>sys_meta_graph_64afb001831da610dd358878beaad3b9</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-05-02 07:20:24</sys_updated_on>
+        </sys_meta_graph>
+    </graph_schema>
+</record_update>
